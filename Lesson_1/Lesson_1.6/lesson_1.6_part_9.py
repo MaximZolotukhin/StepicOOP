@@ -19,4 +19,18 @@ pt = Point(x, y)
 P.S. В программе на экран ничего выводить не нужно.
 """
 class Point:
-    pass
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def clone(self):
+        return Point(self.x, self.y)
+
+
+x, y = 20, 100
+pt = Point(x, y)
+pt_clone = pt.clone()
+
+print(pt.__dict__)
+print(pt_clone.__dict__)
